@@ -10,27 +10,23 @@ def rgb2gray(img):
     return img_gray
 
 def run_rgb():
-    for file in glob.glob("*.jpg"):
 
-        imlist.append(file)
-        file_name=''
-        file_ext=''
-        spot_dot=False
-        for i in range(len(file)):
-            if(file[i]=='.'):
-                spot_dot=True
-            else:
-                if(spot_dot==False):
-                    file_name+=file[i]
-                else:
-                    file_ext+=file[i]
-
+    for file in glob.glob("firstsub/*.jpg"):
+        
         try:
-            file_gray = rgb2gray(scipy.ndimage.imread(file))
+            file_gray=rgb2gray(scipy.ndimage.imread(file))
         except IndexError:
-            print('File '+file_name+' already in grayscale')
+            print(str(file)+' already in grayscale')
             continue
 
-        scipy.misc.imsave(file_name+'_gray.'+file_ext,file_gray)
+        scipy.misc.imsave(file,file_gray)
 
-    print('Images converted into grayscale')
+    for file in glob.glob("secondsub/*.jpg"):
+
+        try:
+            file_gray=rgb2gray(scipy.ndimage.imread(file))
+        except IndexError:
+            print(str(file)+' already in grayscale')
+            continue
+
+        scipy.misc.imsave(file,file_gray)
