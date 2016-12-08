@@ -5,6 +5,7 @@ import pygame.image
 import pygame.time
 import time
 import convert_rgb
+import vlc
 
 import glob,os,shutil
 from PIL import Image
@@ -100,7 +101,15 @@ print(theta)
 
 if(magic_value > 80 and magic_value < 90):
     print("Happy emotion detected with theta = ", magic_value)
+    p=vlc.MediaPlayer('02---Ilahi---Arijit-Singh--MTV-Unplugged--wapking-Mobway.In.mp3')
+    p.play()
 elif(magic_value > 70 and magic_value< 80):
     print("Negative emoton detected with theta = ", magic_value)
+    p=vlc.MediaPlayer('01 - Adele - Hello-BLUWORLD.mp3')
+    p.play()
 else:
     print("No change in emotion")
+
+t_end=time.time()+30
+while time.time()<t_end:
+	pass    
