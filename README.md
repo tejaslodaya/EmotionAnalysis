@@ -13,11 +13,12 @@ Steps taken:
 2) Calculate subsequent subspaces each at time interval T, and at each interval, a series of pictures are buffered and PCA is performed on them. EigenVectors obtained are denoted as EV1.
 
 3) Using mutual subspace method, we calculate the cosine of the angle between them. We classify θ into 3 classes: 
-  • θ > 80 and θ < 90 : Happy emotion was detected
+	
+	• θ > 80 and θ < 90 : Happy emotion was detected
 
-  • θ > 70 and θ < 80 : Negetive emotion was detected 
-
-  • θ <70 : No change in emotion
+	• θ > 70 and θ < 80 : Negetive emotion was detected 
+	
+	• θ <70 : No change in emotion
 
 4) Play music accordingly, to soothen the driver's mood.
 
