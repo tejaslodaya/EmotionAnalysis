@@ -1,11 +1,10 @@
-# EmotionAnalysis
-Emotion Analysis of Aggressive Moods in Automobile driving using Mutual Subspace method
+Emotion analysis of aggressive moods in automobile driving using mutual subspace method
 
 Objectives:
 
-★ Parameterize appearance changes of face image sequences using mutual subspace method,and estimation of level of aggression. 
+• Parameterize appearance changes of face image sequences using mutual subspace method,and estimation of level of aggression. 
 
-★ Mutual subspace method cancels out short-term variations (emotions), and retains long-term changes (mood) by using Principal Component Analysis.
+• Mutual subspace method cancels out short-term variations (emotions), and retains long-term changes (mood) by using Principal Component Analysis.
 
 Steps taken:
 
@@ -17,11 +16,13 @@ Steps taken:
 
 3) Using mutual subspace method, we calculate the cosine of the angle between them. We classify θ into 3 classes: 
 
-★ θ > 80 and θ < 90 : Happy emotion was detected 
+• θ > 80 and θ < 90 : Happy emotion was detected 
 
-★ θ > 70 and θ < 80 : Negetive emotion was detected 
+• θ > 70 and θ < 80 : Negetive emotion was detected 
 
-★ θ <70 : No change in emotion
+• θ <70 : No change in emotion
 
 
 4) Play music accordingly, to soothen the driver's mood.
+
+Implementation of this paper: http://ieeexplore.ieee.org/document/6460771/
